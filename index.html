@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Disease Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Skin Disease Detection</h1>
+        </header>
+
+        <section class="upload">
+            <h2>Upload Skin Image</h2>
+            <form action="/predict" method="POST" enctype="multipart/form-data">
+                <input type="file" name="file" id="file">
+                <button type="submit">Detect</button>
+            </form>
+        </section>
+
+        <section class="result">
+            <h2>Prediction Result</h2>
+            <p id="prediction">No prediction yet.</p>
+        </section>
+
+        <footer>
+            <p>Developed by Kartik Pal</p>
+        </footer>
+    </div>
+</body>
+</html>
